@@ -1,0 +1,97 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Bills extends Model
+{
+    use HasFactory;
+    protected $table = 'Bills';
+    public $timestamps = false;
+    public $incrementing = false;
+    protected $fillable = [
+        'CLAIM_NO',
+        'INVOICE_NO',
+        'CLAIM_FORM_NO',
+        'PROVIDER',
+        'MEMBER_NO',
+        'SERVICE',
+        'CLAIM_NATURE',
+        'REFERRED_BY',
+        'IP_DOCTOR',
+        'INVOICE_DATE',
+        'INVOICED_AMOUNT',
+        'DEDUCTION_AMOUNT',
+        'OVERCHARGE_DEDUCTION_AMOUNT',
+        'DEDUCTION_REASON',
+        'AMOUNT_PAYABLE',
+        'DEDUCTION_NOTES',
+        'PAID',
+        'VOUCHER_NO',
+        'PAYMENT_NO',
+        'SENT_TO_RE',
+        'BATCH_NO',
+        'PAYMENT_DATE',
+        'USER_ID',
+        'DATE_ENTERED',
+        'REFUND',
+        'CLAIMED_CANCELLED',
+        'anniv',
+        'capped',
+        'admin_fee',
+        'fund',
+        'date_received',
+        'vet_status',
+        'entry_notes',
+        'voucher_user',
+        'bill_serial_no',
+        'contra_amt',
+        'smart_bill_id',
+        'pre_auth_no',
+        'voucher_date',
+        'family_no',
+        'corp_id',
+        'sub_bene',
+        'pri_dep',
+        'category',
+        'product_name',
+        'id',
+        'provider_code',
+        'hits_status',
+        'bene_code',
+        'treatment_code',
+        'corp_code',
+        'vet_date',
+        'diag_code',
+        'reject_reason',
+        'visit_date',
+        'doc_date',
+        'payee',
+        'chronic_case',
+        'reversed_amt',
+        'import',
+        'currency',
+        'foreigns',
+        'foreign_amt',
+        'conversion_rate',
+        'msa',
+        'claim_form',
+        'integ',
+        'source',
+        'integ_date',
+        'ebatch_no',
+        'ebatch_date',
+        'visit_id',
+        'chronic_bill',
+        'prescription',
+        'prescription_days',
+        'date_of_refill',
+        'next_date_of_refill',
+        'remarks',
+        'expectation',
+        'followup'
+    ];
+
+}

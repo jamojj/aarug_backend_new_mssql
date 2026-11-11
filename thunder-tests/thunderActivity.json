@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "e4e3f3ff-b157-48a4-bc6d-f4ae6badbf70",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://127.0.0.1:8000/api/fetch_corporates_to_debit",
+    "url": "http://127.0.0.1:8000/api/fetch_corporates_to_debit",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-04-26T07:44:02.972Z",
+    "modified": "2022-04-27T07:43:19.530Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "0b45bf9a-5344-40c4-8182-9ebb705b3ef6",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://127.0.0.1:8000/api/get_corporate_anniversary_dates/1/653",
+    "url": "http://127.0.0.1:8000/api/fetch_claims_per_cheque_no/-C4064/Q57118",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-04-26T09:31:14.423Z",
+    "modified": "2022-05-09T07:50:55.144Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
