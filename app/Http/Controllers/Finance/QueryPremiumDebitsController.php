@@ -278,7 +278,7 @@ class QueryPremiumDebitsController extends Controller
             $client = $client[0]->names;
 
             $cover_dates = MemberAnniversary::select(
-                DB::raw("CONCATmax(FORMAT(member_anniversary.start_date, 'yyyy-mm-dd')),' to ',max(FORMAT(member_anniversary.end_date, 'yyyy-mm-dd'))) as cover_dates")
+                DB::raw("CONCAT(max(FORMAT(member_anniversary.start_date, 'yyyy-mm-dd')),' to ',max(FORMAT(member_anniversary.end_date, 'yyyy-mm-dd'))) as cover_dates")
 
             )
                 ->where('member_no', $sammary[0]->member_no)
@@ -300,7 +300,7 @@ class QueryPremiumDebitsController extends Controller
             $policy_no = $corp_data[0]->policy_no;
 
             $cover_dates = CorpAnniversary::select(
-                DB::raw("CONCATmax(FORMAT(corp_anniversary.start_date, 'yyyy-mm-dd')),' to ',max(FORMAT(corp_anniversary.end_date, 'yyyy-mm-dd'))) as cover_dates")
+                DB::raw("CONCAT(max(FORMAT(corp_anniversary.start_date, 'yyyy-mm-dd')),' to ',max(FORMAT(corp_anniversary.end_date, 'yyyy-mm-dd'))) as cover_dates")
 
             )
                 ->where('corp_id', $sammary[0]->corp_id)

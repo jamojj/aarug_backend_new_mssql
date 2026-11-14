@@ -96,11 +96,7 @@ class PremiumReceiptController extends Controller
     public function savePremiumReceipts(Request $request)
     {
         //return $request;
-        $user_rate = '';
-        $receipt_amount =  intval(preg_replace('/[^\d.]/', '', $request->receipt_amount));
-        if ($request->currency == 1) {
-            $user_rate == null;
-        }
+        $receipt_amount =  intval(preg_replace('/[^\d.]/', '', $request->receipt_amount));    
         $receipt_no = $this->getLatestReceiptNumber();
         $receipt_no = json_decode($receipt_no);
         //save premium receipt
@@ -127,7 +123,6 @@ class PremiumReceiptController extends Controller
                     'agent_id' => $request->agent_id,
                     'account_toallocate' => $request->bank_account,
                     'sys_rate' => (int)$request->sys_rate,
-                    'user_rate' => $user_rate,
                     'currency' => $request->currency,
                     'trans_amt' => $request->transact_amount,
                     'reversed' => 0
@@ -154,7 +149,6 @@ class PremiumReceiptController extends Controller
                     'agent_id' => $request->agent_id,
                     'account_toallocate' => $request->bank_account,
                     'sys_rate' => (int)$request->sys_rate,
-                    'user_rate' => $user_rate,
                     'currency' => $request->currency,
                     'trans_amt' => $request->transact_amount,
                     'reversed' => 0

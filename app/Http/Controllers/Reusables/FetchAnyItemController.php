@@ -682,7 +682,7 @@ class FetchAnyItemController extends Controller
         $data = PrincipalApplicant::select(
             'member_no',
             'family_no',
-            DB::raw("CONCATsurname,' ',first_name,' ', other_names) as principal_name")
+            DB::raw("CONCAT(surname,' ',first_name,' ', other_names) as principal_name")
         )
             ->where('individual', 2)
             ->orderBy('principal_name')

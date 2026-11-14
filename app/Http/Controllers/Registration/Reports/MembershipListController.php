@@ -222,14 +222,14 @@ class MembershipListController extends Controller
 
                 foreach ($rows as $row) {
                     $member = MemberInfo::select(
-                        DB::raw("CONCATsurname,' ',first_name,' ',other_names) as member_names"),
+                        DB::raw("CONCAT(surname,' ',first_name,' ',other_names) as member_names"),
                     )
                         ->where('family_no', $row->family_no)
                         ->where('member_no', $row->member_no)
                         ->get();
 
                     $principal = PrincipalApplicant::select(
-                        DB::raw("CONCATsurname,' ',first_name,' ',other_names) as principal_applicant"),
+                        DB::raw("CONCAT(surname,' ',first_name,' ',other_names) as principal_applicant"),
                     )
                         ->where('family_no', $row->family_no)
                         ->get();

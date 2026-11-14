@@ -346,7 +346,7 @@ class MembershipRenewalController extends Controller
 
                     foreach ($corp_benefits as $corp_ben) {
                         $member_data = MemberInfo::select(
-                            DB::raw("CONCATsurname,' ',first_name,' ',other_names) as member_name"),
+                            DB::raw("CONCAT(surname,' ',first_name,' ',other_names) as member_name"),
                             'member_no'
                         )
                             ->where('member_no', $request->member_no[$i])
